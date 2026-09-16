@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0d12" />
+  <title>ControlHub — 6 Channel Controller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">REMOTE CONTROL</div>
+        <h1>ControlHub</h1>
+        <p>6-channel IoT control dashboard</p>
+      </div>
+      <div class="connection-pill"><span class="dot"></span><span id="connectionText">Cloud ready</span></div>
+    </header>
+
+    <section class="overview">
+      <div class="overview-card">
+        <span class="label">DEVICE</span>
+        <strong>XIAO ESP32-C3</strong>
+        <small>Hardware connection pending</small>
+      </div>
+      <div class="overview-card">
+        <span class="label">CHANNELS</span>
+        <strong id="activeCount">0 / 6 ON</strong>
+        <small>Virtual control mode</small>
+      </div>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <h2>Channels</h2>
+        <p>Tap a channel to change its virtual state.</p>
+      </div>
+      <button class="all-button" id="allOff">ALL OFF</button>
+    </section>
+
+    <section class="channel-grid" id="channelGrid" aria-label="Six channel controls"></section>
+
+    <footer>
+      <span>ControlHub v0.1</span>
+      <span>ESP32-ready architecture</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
